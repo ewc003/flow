@@ -22,7 +22,7 @@ func GenerateToken(userID string) (string, error) {
 	}
 
 	// Create claims with user ID and expiration time
-	expirationTime := time.Now().Add(24 * time.Hour) // Token expires in 24 hours
+	expirationTime := time.Now().Add(15 * time.Minute) // Token expires in 24 hours
 	claims := CustomClaims{
 		UserID: userID,
 		RegisteredClaims: jwt.RegisteredClaims{
